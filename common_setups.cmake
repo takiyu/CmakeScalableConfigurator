@@ -15,9 +15,10 @@
 #   - 2021/06/08 Check version
 #   - 2021/06/09 Explicit git checkout
 #   - 2021/07/05 Restore FETCHCONTENT_... vairbales
+#   - 2021/09/16 Fix for android
 #
-message(STATUS "common_setups.cmake v0.8")
-set(CSC_VERSION_LOCAL 8)
+message(STATUS "common_setups.cmake v0.9")
+set(CSC_VERSION_LOCAL 9)
 
 # Check version
 if (DEFINED CSC_VERSION)
