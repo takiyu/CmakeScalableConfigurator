@@ -107,12 +107,12 @@ endfunction()
 
 # Utility function to setup third_party (macro for no scope)
 macro(setup_third_party url tag is_subdir third_party_dir)
-    get_filename_component(target ${url} NAME_WLE)  # Generate name from URL
+    get_filename_component(target ${url} NAME_WE)  # Generate name from URL
     string(TOLOWER ${target} target_lc)             # Lower name
     message(">> FetchContent: [${target}](${tag})")
 
     # Version check
-    if ("3.10" VERSION_LESS ${CMAKE_VERSION})
+    if ("3.11" VERSION_LESS ${CMAKE_VERSION})
         # Store previous values
         set(PREV_QUIET ${FETCHCONTENT_QUIET})
         set(PREV_UPDATE_DISCONNECTED ${FETCHCONTENT_UPDATE_DISCONNECTED})
