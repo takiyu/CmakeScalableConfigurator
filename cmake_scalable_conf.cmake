@@ -111,7 +111,7 @@ endfunction()
 macro(csc_clone_third_party url tag use_add_subdir third_party_dir)
     get_filename_component(target ${url} NAME_WE)  # Generate name from URL
     string(TOLOWER ${target} target_lc)            # Lower name
-    message(">> FetchContent: [${target}](${tag})")
+    message(">> CSC FetchContent: [${target}](${tag})")
 
     # Version check
     if ("3.11" VERSION_LESS ${CMAKE_VERSION})
