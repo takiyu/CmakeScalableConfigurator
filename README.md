@@ -1,4 +1,4 @@
-# CMake Common Setups
-My common script for CMake setups.
+# Cmake Scalable Configurator
+Cmake script for complex repositry dependency.
 
 Copy files into your `<project_root>/cmake` directory.
