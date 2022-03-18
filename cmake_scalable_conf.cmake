@@ -34,7 +34,7 @@ endif()
 
 # Update this script
 # file(DOWNLOAD
-#      "https://raw.githubusercontent.com/takiyu/cmake_scalable_configurator.cmake/master/cmake_scalable_conf.cmake"
+#      "https://raw.githubusercontent.com/takiyu/cmake_scalable_configurator/master/cmake_scalable_conf.cmake"
 #      ${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_scalable_conf.cmake SHOW_PROGRESS)
 
 # Print make commands for debug
