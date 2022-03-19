@@ -28,6 +28,7 @@ function(csc_download_latest)
         "https://raw.githubusercontent.com/takiyu/cmake_scalable_configurator/master/cmake_scalable_conf.cmake"
         ${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_scalable_conf.cmake
         SHOW_PROGRESS)
+    message(FATAL_ERROR "CSC script is updated. Please run CMake again.")
 endfunction()
 
 # Check version
@@ -36,9 +37,8 @@ if (DEFINED CSC_VERSION)
     if (NOT ${CSC_VERSION} EQUAL ${CSC_VERSION_LOCAL})
         if (${CSC_VERSION_LOCAL} LESS ${CSC_VERSION})
             # Update this script
-            message(STATUS "Update CSC script.")
+            message(STATUS "Update CSC script")
             csc_download_latest()
-            message(FATAL_ERROR "CSC script is updated. Please run CMake again.")
         else()
             # Previous repositry have old CSC. Nothing to do here.
             message(FATAL_ERROR "CSC_VERSION mismatch")
