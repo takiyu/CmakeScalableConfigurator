@@ -17,9 +17,10 @@
 #   - 2021/07/05 Restore FETCHCONTENT_... vairbales
 #   - 2021/09/16 Fix for android
 #   - 2022/03/18 Change project name
+#   - 2022/03/19 Add auto version update
 #
-message(STATUS "CMake Scalable Configurator v1.0")
-set(CSC_VERSION_LOCAL 10)
+message(STATUS "CMake Scalable Configurator v1.1")
+set(CSC_VERSION_LOCAL 11)
 
 # Utility function to update this CSC script
 function(csc_download_latest)
