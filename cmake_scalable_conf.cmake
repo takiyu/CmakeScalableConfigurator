@@ -20,7 +20,7 @@
 #   - 2022/03/19 Add auto version update
 #
 message(STATUS "CSC (CMake Scalable Configurator) v1.1")
-set(CSC_VERSION_LOCAL 11)
+set(CSC_VERSION_LOCAL 12)
 
 # Utility function to update this CSC script
 function(csc_download_latest)
@@ -35,14 +35,14 @@ endfunction()
 if (DEFINED CSC_VERSION)
     # Check version
     if (NOT ${CSC_VERSION} EQUAL ${CSC_VERSION_LOCAL})
+        message(WARNING "CSC version mismatch")
         if (${CSC_VERSION_LOCAL} LESS ${CSC_VERSION})
-            # Update this script
+            # Overwrite this script by the latest
             message(STATUS "Update CSC script")
             csc_download_latest()
         else()
             # Previous repositry have old CSC. Nothing to do here.
-            message(FATAL_ERROR
-                    "CSC version mismatch. Remove cmake cache or update CSC.")
+            message(FATAL_ERROR "Remove cmake cache or update CSC.")
         endif()
     endif()
 else()
