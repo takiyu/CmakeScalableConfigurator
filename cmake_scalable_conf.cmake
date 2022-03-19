@@ -41,7 +41,8 @@ if (DEFINED CSC_VERSION)
             csc_download_latest()
         else()
             # Previous repositry have old CSC. Nothing to do here.
-            message(FATAL_ERROR "CSC_VERSION mismatch")
+            message(FATAL_ERROR
+                    "CSC version mismatch. Remove cmake cache or update CSC.")
         endif()
     endif()
 else()
